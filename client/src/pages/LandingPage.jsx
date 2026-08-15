@@ -1,6 +1,7 @@
 import AnnouncementBar from '../components/AnnouncementBar';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import SocialCommunity from '../components/SocialCommunity';
 import TrustStrip from '../components/TrustStrip';
 import RewardSection from '../components/RewardSection';
 import HowItWorks from '../components/HowItWorks';
@@ -26,6 +27,7 @@ export default function LandingPage() {
       {/* Main content */}
       <main>
           <Hero />
+          <SocialCommunity />
           <TrustStrip />
           <RewardSection />
           <HowItWorks />

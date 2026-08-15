@@ -129,7 +129,11 @@ export default function Hero() {
               </div>
 
               {/* Social Links */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col gap-2 pt-2">
+                <p className="text-xs md:text-sm text-gray-300 italic max-w-sm">
+                  <strong className="text-blue-300 not-italic">Confused?</strong> If you cannot understand the process, join our channels for guidance!
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="https://whatsapp.com/channel/0029Vb8HkU8F6sn5dKFgcV2A"
                   target="_blank"
@@ -148,6 +152,7 @@ export default function Hero() {
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"/></svg>
                   Join Telegram
                 </a>
+                </div>
               </div>
             </motion.div>
 
