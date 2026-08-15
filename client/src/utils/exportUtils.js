@@ -1,6 +1,4 @@
 import * as XLSX from 'xlsx';
-import jsPDF from 'jspdf';
-import 'jspdf-autotable';
 
 // Reusable function to format data for export
 const formatDataForExport = (data) => {
@@ -38,36 +36,4 @@ export const downloadExcel = (data) => {
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, "Registrations");
   XLSX.writeFile(workbook, `EarnPepe_Registrations_${Date.now()}.xlsx`);
-};
-
-export const downloadPDF = (data) => {
-  if (!data || data.length === 0) return;
-  const doc = new jsPDF('landscape');
-  
-  doc.setFontSize(18);
-  doc.text('EarnPepe Campaign - Registered Members', 14, 15);
-  doc.setFontSize(11);
-  doc.text(`Generated on: ${new Date().toLocaleString()}`, 14, 23);
-
-  const tableColumn = ["S.No", "Reg ID", "Full Name", "Email", "Contact", "PhonePe", "Date"];
-  const tableRows = data.map((item, index) => [
-    index + 1,
-    item.id.split('-')[1] || item.id, // shorten ID for PDF
-    item.fullName,
-    item.email,
-    item.contactNumber,
-    item.phonePeNumber,
-    new Date(item.timestamp).toLocaleDateString()
-  ]);
-
-  doc.autoTable({
-    head: [tableColumn],
-    body: tableRows,
-    startY: 30,
-    theme: 'grid',
-    styles: { fontSize: 9, cellPadding: 2 },
-    headStyles: { fillColor: [22, 163, 74] }, // Tailwind green-600
-  });
-
-  doc.save(`EarnPepe_Registrations_${Date.now()}.pdf`);
 };

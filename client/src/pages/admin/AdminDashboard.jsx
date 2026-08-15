@@ -1,13 +1,13 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  LogOut, Search, Download, FileText, FileSpreadsheet, FileJson, 
+  LogOut, Search, Download, FileSpreadsheet, FileJson, 
   Calendar, Users, Filter, ChevronDown 
 } from 'lucide-react';
 import { isToday, isYesterday, isTomorrow, isWithinInterval, startOfDay, endOfDay, parseISO } from 'date-fns';
 import { getRegistrations } from '../../services/registrationService';
 import { logoutAdmin } from '../../services/authService';
-import { downloadCSV, downloadExcel, downloadPDF } from '../../utils/exportUtils';
+import { downloadCSV, downloadExcel } from '../../utils/exportUtils';
 
 export default function AdminDashboard() {
   const [registrations, setRegistrations] = useState([]);
@@ -112,9 +112,6 @@ export default function AdminDashboard() {
               </button>
               <button onClick={() => downloadExcel(filteredData)} className="flex-1 bg-green-900/50 hover:bg-green-800/60 text-green-400 text-xs py-2 rounded-lg flex items-center justify-center gap-1.5 border border-green-500/30 transition-colors" title="Download Excel">
                 <FileSpreadsheet size={14} /> Excel
-              </button>
-              <button onClick={() => downloadPDF(filteredData)} className="flex-1 bg-red-900/40 hover:bg-red-800/50 text-red-400 text-xs py-2 rounded-lg flex items-center justify-center gap-1.5 border border-red-500/30 transition-colors" title="Download PDF">
-                <FileText size={14} /> PDF
               </button>
             </div>
           </div>
