@@ -82,10 +82,16 @@ export default function RewardSection() {
                 </div>
               </motion.div>
 
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mb-4">
                 Earn PEPE coins by completing available eligible activities on
                 the platform.
               </p>
+              
+              <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3 inline-block">
+                <p className="text-red-400 font-bold text-xs sm:text-sm">
+                  ⚠️ REQUIRED: You MUST earn 50,000 PEPE coins to be eligible for cashback.
+                </p>
+              </div>
             </div>
           </motion.div>
 

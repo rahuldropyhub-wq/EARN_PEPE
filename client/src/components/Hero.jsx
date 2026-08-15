@@ -118,12 +118,15 @@ export default function Hero() {
             </motion.p>
 
             {/* Urgency */}
-            <motion.p
-              variants={itemVariants}
-              className="text-sm font-semibold text-orange-400 flex items-center gap-2"
-            >
-              ⚡ Don&apos;t miss this opportunity - grab it now!
-            </motion.p>
+            <motion.div variants={itemVariants} className="flex flex-col gap-3">
+              <p className="text-sm font-semibold text-orange-400 flex items-center gap-2">
+                ⚡ Don&apos;t miss this opportunity - grab it now!
+              </p>
+              
+              <div className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-bold w-fit shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                📧 Note: EarnPepe sign in only requires G-Mail!
+              </div>
+            </motion.div>
 
             {/* CTAs */}
             <motion.div
