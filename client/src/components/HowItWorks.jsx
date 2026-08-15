@@ -57,7 +57,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="pt-24 pb-12 section-gradient relative overflow-hidden">
       {/* Background grid */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage:
             'linear-gradient(rgba(34,197,94,1) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,1) 1px, transparent 1px)',
@@ -65,7 +65,7 @@ export default function HowItWorks() {
         }}
       />
 
-      <Container>
+      <Container className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
