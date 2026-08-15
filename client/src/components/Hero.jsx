@@ -102,8 +102,9 @@ export default function Hero() {
             {/* Subheadline */}
             <motion.div variants={itemVariants}>
               <p className="text-xl font-bold text-green-300">
-                Earn Up To{' '}
-                <span className="text-yellow-300">50,000 PEPE Coins</span>
+                Must Earn{' '}
+                <span className="text-yellow-300 underline decoration-red-500 decoration-2 underline-offset-4">50,000 PEPE Coins</span>
+                {' '}To Be Eligible
               </p>
             </motion.div>
 
@@ -208,7 +209,7 @@ export default function Hero() {
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
               className="absolute -bottom-2 md:-bottom-4 -left-2 md:-left-4 card-glass-strong px-2 md:px-4 py-1 md:py-2.5 rounded-lg md:rounded-2xl shadow-lg border border-green-500/30 z-10"
             >
-              <div className="text-[9px] md:text-xs text-green-400 font-semibold leading-tight">EARN UP TO</div>
+              <div className="text-[9px] md:text-xs text-green-400 font-semibold leading-tight">MUST EARN</div>
               <div className="text-[11px] md:text-xl font-black text-white leading-tight">50,000 <span className="text-green-400">PEPE</span></div>
             </motion.div>
 
